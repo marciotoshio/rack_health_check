@@ -1,4 +1,4 @@
-# rack_health_check gem
+# rack_health_check gem ![build status](https://travis-ci.org/marciotoshio/rack_health_check.svg?branch=master "build status")
 
 Simple health check of rack apps.
 
