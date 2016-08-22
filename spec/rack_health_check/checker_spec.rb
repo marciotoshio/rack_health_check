@@ -12,7 +12,7 @@ describe RackHealthCheck::Checker do
   end
 
   before do
-    RackHealthCheck.config.strategies = [RackHealthCheck::Strategy::Http]
+    RackHealthCheck.config.strategies = [RackHealthCheck::Strategy::HttpChecker]
   end
 
   context 'when call the default health check path' do
@@ -35,7 +35,7 @@ describe RackHealthCheck::Checker do
 
   context 'when some strategy raise an error' do
     before do
-      allow(RackHealthCheck::Strategy::Http).to receive(:health_check)
+      allow(RackHealthCheck::Strategy::HttpChecker).to receive(:health_check)
         .and_raise('some error')
     end
 

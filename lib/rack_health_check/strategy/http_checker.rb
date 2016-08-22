@@ -2,7 +2,7 @@
 module RackHealthCheck
   module Strategy
     # Check status for https requests
-    class Http
+    class HttpChecker
       def self.health_check
       end
     end
